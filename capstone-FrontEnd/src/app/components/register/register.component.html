@@ -1,0 +1,62 @@
+<body>
+    <div class="heading">
+        <h1>TO DO APPLICATION</h1>
+    </div>
+    <div class="heading1">
+        <br>
+        <h1>REGISTER HERE</h1>
+    </div>
+
+    <div>
+        <form [formGroup]="register" id="form">
+            <div class="box">
+                <label for="exampleInputUsername">Enter User Name : </label>
+                <input type="text" class="form-control" placeholder="Enter User Name" formControlName="username"
+                    required>
+                <div *ngIf="username.invalid && (username.dirty || username.touched)">
+                    <small class="text-danger"> User name is required</small>
+                </div>
+            </div>
+            <div class="box">
+                <label for="exampleInputEmail">Enter Email Id : </label>
+                <input type="text" class="form-control" placeholder="Enter Email ID" formControlName="email" required>
+                <div *ngIf="email.errors && (email.invalid && email.touched)">
+                    <small class="text-danger" *ngIf="email.errors['required']">Email id is required</small>
+                    <small class="text-danger" *ngIf="email.errors['pattern']"> please enter a valid email
+                        address</small>
+                </div>
+            </div>
+            <div class="box">
+                <label for="exampleInputPassword1">Enter Password :
+                </label>
+                <input type="password" class="form-control" placeholder="Enter Your Password" formControlName="password" required>
+                <div *ngIf="password.errors && (password.invalid && password.touched)">
+                    <small class="text-danger" *ngIf="password.errors['required']">Password is required</small>
+                    <small class="text-danger" *ngIf="password.errors['pattern']">At least 8 or more characters</small>
+                </div>
+            </div>
+            <div class="box">
+                <label for="exampleInputContactNumber">Enter Contact :
+                </label>
+                <input type="text" class="form-control" placeholder="Enter Contact Number" formControlName="contact"
+                    required>
+                <div *ngIf="contact.errors &&(contact.invalid&& contact.touched)">
+                    <small class="text-danger" *ngIf="contact.errors['required']">Contact Number is required</small>
+                    <small class="text-danger" *ngIf="contact.errors?.['pattern']">Enter Valid Mobile Number </small>
+                </div>
+            </div>
+            <br>
+            <div>
+                <label for="exampleInputGender">Select Gender : </label>
+                <select formControlName="gender" required>
+                    <option value="MALE">MALE</option>
+                    <option value="FEMALE">FEMALE</option>
+                </select>
+            </div><br>
+            <button class="btn" [disabled]="register.invalid" mat-raised-button color="primary" type="submit"
+                (click)="saveUser(register.value)">SIGN UP</button>
+            <br>
+        </form>
+    </div>
+    <router-outlet></router-outlet>
+</body>

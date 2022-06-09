@@ -1,0 +1,62 @@
+
+#addtask{
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+    border: 3px solid #8AC007;
+}
+.bg{
+    margin-top: 3%;
+    background-image: url(src\assets\image\todo2.jpg);
+    background-size: cover;
+}
+
+mat-card {
+    width: 10cm;
+    margin-left: 6%;
+    margin-top: 15px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 20px;  
+}
+
+/* body {
+    background-image: url("src\assets\image\todo1.jpg");
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    background-size: cover;
+  } */
+
+body{
+    background: url(src\assets\image\todo6.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color:red;
+    background-color: green;
+    }
+
+/* Styles for the active tab label */
+/* .mat-tab-label.mat-tab-label-active {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color:greenyellow;
+    color: red;
+    font-weight: 700;
+} */
+
+
+ /* #matTabs{
+    color: rgb(227, 52, 52);
+} */
+/*
+.mat-tab-label .mat-tab-label-content{
+    color: black;
+}
+.mat-tab-body .mat-tab-body-active{
+    z-index: 0;
+} */

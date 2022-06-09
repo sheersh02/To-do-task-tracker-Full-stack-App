@@ -1,0 +1,105 @@
+<body>
+  <div id="division">
+    <mat-tab-group mat-stretch-tabs>
+      <mat-tab label="All Tasks">
+        <ng-template mat-tab-label>
+          <h1 class="ls" style="color:white;"><b> All Tasks </b> </h1>
+        </ng-template>
+        <!-- move it a little  -->
+        <div id="AddTask">
+          <button mat-raised-button color="primary" (click)="enterTask()">
+            Add Tasks
+          </button>
+          <br />
+        </div>
+        <mat-card class="card-footer" class="example-card" *ngFor="let array of tasks">
+          <mat-card-header>
+            <div mat-card-avatar class="bg"></div>
+            <mat-card-title>{{ array.title }}</mat-card-title>
+            <mat-card-subtitle>PRIORITY : {{ array.priority }}</mat-card-subtitle>
+            <mat-card-subtitle>EndDate : {{ array.endDate }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-actions>
+            <button mat-button (click)="updateTask(array)" title="Edit">
+              EDIT
+            </button>
+            <button mat-button (click)="view(array)" title="Details">
+              VIEW DETAILS
+            </button>
+
+            <button mat-menu-item (click)="movetoArchive(array); delete(array.taskId)">
+              <mat-icon>archive</mat-icon>
+              <span>Move to Archive</span>
+            </button>
+            <button mat-menu-item (click)="deletetask(array.taskId)">
+              <mat-icon>delete</mat-icon>
+              <span>Delete</span>
+            </button>
+            <button mat-menu-item *ngIf="!array.completed" (click)="completed(array.taskId)">
+              <mat-icon>done_all</mat-icon>
+              <span>Mark As Completed</span>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+        <!-- <div>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div> -->
+      </mat-tab>
+      <mat-tab label="Ongoing Tasks">
+        <ng-template mat-tab-label>
+          <h1 class="ls" style="color:white;"><b>Ongoing Tasks </b> </h1>
+        </ng-template>
+        <mat-card class="card-footer" class="example-card" *ngFor="let array of pendingData">
+          <mat-card-header>
+            <div mat-card-avatar class="bg"></div>
+            <mat-card-title>{{ array.title }}</mat-card-title>
+            <mat-card-subtitle>PRIORITY : {{ array.priority }}</mat-card-subtitle>
+            <mat-card-subtitle>{{ array.endDate }}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-actions>
+            <button mat-button (click)="updateTask(array); show = 'B'" title="Edit">
+              EDIT
+            </button>
+
+            <button mat-button (click)="view(array)" title="Details">INFO</button>
+
+            <button mat-menu-item (click)="movetoArchive(array); delete(array.taskId)">
+              <mat-icon>archive</mat-icon>
+              <span>Move to Archive</span>
+            </button>
+            <button mat-menu-item (click)="deletetask(array.taskId)">
+              <mat-icon>delete</mat-icon>
+              <span>Delete</span>
+            </button>
+            <button mat-menu-item *ngIf="!array.completed" (click)="completed(array.taskId)">
+              <mat-icon>done_all</mat-icon>
+              <span>Mark As Completed</span>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-tab>
+      <mat-tab label="Completed Tasks">
+        <ng-template mat-tab-label>
+          <h1  class="ls" style="color:white;"><b>Completed Tasks </b> </h1>
+        </ng-template>
+        <mat-card class="card-footer" class="example-card" *ngFor="let array of completedTasks">
+          <mat-card-header>
+            <div mat-card-avatar class="bg"></div>
+            <mat-card-title>{{ array.title }}</mat-card-title>
+            <mat-card-subtitle>PRIORITY : {{ array.priority }}</mat-card-subtitle>
+            <mat-card-subtitle>{{ array.endDate }}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-actions>
+            <button mat-button (click)="view(array)" title="Details">INFO</button>
+            <button mat-button (click)="deletetask(array.taskId)" title="Delete">
+              DELETE
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-tab>
+    </mat-tab-group>
+    <router-outlet></router-outlet>
+  </div>
+</body>

@@ -1,0 +1,112 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+div input {
+    background: none;
+    margin: 12px 0px;
+    font-size: 20px;
+    width: 80%;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+}
+
+.box {
+    width: 80%;
+    padding: 8px 0px;
+    /* border-bottom: 2px solid purple; */
+}
+
+body {
+    background: url(src\assets\image\todo2.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#form {
+    width: 25%;
+    height: 50px;
+    position: absolute;
+    right: 20%;
+    top: 5%;
+}
+
+#register {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#form input {
+    width: 400px;
+    margin-left: 3px;
+    border: 1px solid yellow;
+}
+
+label {
+    font-size: 15px;
+    color: white;
+}
+
+div select {
+    background-color: wheat;
+    color: black;
+}
+
+mat-select {
+    width: 400px;
+    margin-left: 20px;
+
+}
+
+#loginButton {
+    margin-top: 10px;
+    font-size: small;
+}
+
+
+.heading h1 {
+    color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 25%;
+    right: 60%;
+    font-size: 70px;
+}
+
+.heading1 h1 {
+    color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    font-size: 55px;
+    top: 40%;
+    right: 67%;
+    ;
+}
+
+#tag {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2cm;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+}
+
+.text-danger {
+    color: red;
+    width: 13cm;
+    height: 5px;
+    margin-left: 20px;
+}
+
+#login {
+    position: absolute;
+    right: 3%;
+    top: 3.5%;
+}
+
+.btn:disabled{
+    color: yellow;
+    border: 2px solid yellow;
+}

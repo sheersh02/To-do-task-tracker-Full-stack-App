@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.btn:disabled{
+    color: yellow;
+    border: 2px solid yellow;
+}
+body{
+    background: url(src\assets\image\todo2.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.center{
+    width: 500px;
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 58%;
+}
+.center h1{
+    font-size: 80px;
+
+    /* border-bottom: 5px solid yellow; */
+    margin-bottom: 25px;
+    padding: 15px;
+}
+.box{
+    width: 100%;
+    padding: 10px 0px;
+    /* border-bottom: 2px solid purple; */
+    /* border: 1px solid yellow; */
+}
+
+.box input{
+    background: none;
+    margin: 12px 0px;
+    font-size: 20px;
+    width: 80%;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+}
+
+.btn{
+    cursor: pointer;
+    outline: none;
+    margin: 12px 0;
+    padding: 6px;
+    border-radius: 15px;
+    /* border: 2px solid yellow; */
+    width: 80px;
+}
+.signup{
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 10%;
+}
+
+.qt{
+    /* border: solid purple; */
+    width: 30%;
+    color:white;
+    position: absolute;
+    top: 10%;
+    right:60%;
+}
+
+.qt p{
+    color: yellow;
+    padding: 33px;
+    font-size: 120px;
+}
+.qt h1{
+    width: 10%;
+    padding: 33px;
+    font-size: 100px;
+    color: aqua;
+}
+.txt{
+    width: 10%;
+    padding: 70px;
+    font-size: 100px;
+    color: greenyellow;
+}
+
+
+.heading h1
+{
+    color: yellow; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 25%;
+    right: 60%;
+    font-size: 70px;
+}
+.heading1 h1
+{
+    color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    font-size: 55px;
+    top: 40%;
+    right: 67%;;
+}

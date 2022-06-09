@@ -1,0 +1,40 @@
+<body class="txtbox">
+  <div class="heading">
+    <h1>TO DO APPLICATION</h1>
+</div>
+<div class="heading1">
+    <br>
+    <h1>LOGIN HERE</h1>
+    <!-- <button mat-raised-button color="primary">Primary</button> -->
+</div>
+  <div class="center">
+    <form [formGroup]="addUser" id="form">
+      <h1 id="welcome">WELCOME</h1>
+     <div class="box">
+       <label style="color: white" for="exampleInputUsername">User Name : </label>
+       <input type="text" class="form-control" id="exampleInputUsername" placeholder="Enter Your UserName"
+         formControlName="username" required>
+       <div *ngIf="username.invalid && (username.dirty || username.touched)">
+         <small style="color: red;" *ngIf="username.errors?.['required']">
+           username is required
+         </small>
+       </div>
+     </div>
+     <div class="box">
+       <label style="color: white" for="exampleInputPassword1">Password : </label>
+       <i class="fa fa-envelope"></i>
+       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Password"
+         formControlName="password" required>
+       <div *ngIf="password.invalid && (password.dirty || password.touched)">
+         <small *ngIf="password.errors?.['required']" style="color: red;">
+           Password is required
+         </small>
+       </div>
+     </div><br>
+     <button class="btn" [disabled]="addUser.invalid" (click)="login(addUser.value);" mat-raised-button color="primary">LOGIN</button>
+    
+     <label class="signup" style="color: yellow" id="registerButton">DON'T HAVE ACCOUNT ?<a style="cursor: pointer;" (click)="signUp()">SIGNUP</a></label>
+   </form>
+   <router-outlet></router-outlet>
+  </div>
+ </body>

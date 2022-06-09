@@ -1,0 +1,30 @@
+mat-card {
+    /* max-width: 250px; */
+    margin-left: 50px;
+    width: 262px;
+    margin-top: 15px;
+    display: inline-block;
+    border: 2px solid grey;
+    border-radius: 10px;
+
+}
+
+.bgoffice{
+    background: url(src\assets\image\office.png);
+    background-size: cover;
+}
+
+.bghome{
+    background-image: url(src\assets\image\home.jpg);
+    background-size: cover;
+}
+
+.bgpersonal{
+    background-image: url(src\assets\image\personal.png);
+    background-size: cover;
+}
+
+body{
+    background: url(src\assets\image\todo1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}

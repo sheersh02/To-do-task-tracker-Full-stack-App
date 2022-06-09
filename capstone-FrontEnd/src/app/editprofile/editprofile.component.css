@@ -1,0 +1,56 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    background: url(src\assets\image\todo2.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+input{
+    background: none;
+    border: 1px solid yellow;
+}
+
+.heading h1{
+    color:yellow;
+    font-size: 60px;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 2%;
+}
+.heading1 h1{
+    color:yellow;
+    font-size: 60px;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 15%;
+}
+
+.heading2 h1{
+    color:yellow;
+    font-size: 60px;
+    position: absolute;
+    margin-top: 25%;
+    margin-left: 9%;
+}
+
+
+
+.center{
+    position: absolute;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+
+.t1{
+    color: white;
+}
+
+label{
+    color: white;
+}
+
+.upload{
+    color: white;
+}
